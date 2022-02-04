@@ -1,9 +1,11 @@
 class Account
 
+  attr_accessor :balance
 
-  def balance
-    0
+  def initialize
+    @balance = 0
   end
+
 
   def deposit(amount)
     amount = 100
