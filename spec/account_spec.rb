@@ -11,5 +11,9 @@ describe Account do
     expect(account.deposit(100)).to eq 100
   end
 
-  
+  it 'should be able to withdraw money' do
+    account = Account.new
+    account.deposit(100)
+    expect(account.withdraw(50)).to eq 50
+  end
 end

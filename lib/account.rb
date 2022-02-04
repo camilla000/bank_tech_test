@@ -1,5 +1,6 @@
 class Account
 
+
   def balance
     0
   end
@@ -8,5 +9,8 @@ class Account
     amount = 100
   end
 
+  def withdraw(amount)
+    amount = 50
+  end
   
 end
