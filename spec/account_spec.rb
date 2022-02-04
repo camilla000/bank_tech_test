@@ -1,19 +1,25 @@
 require 'account'
 
 describe Account do
+  before(:each) do
+    @account = Account.new
+  end
+
+
   it 'should have a balance of 0' do
-    account = Account.new
-    expect(account.balance).to eq 0
+    expect(@account.account_balance).to eq(0)
   end
 
   it 'should be able to deposit money' do
-    account = Account.new
-    expect(account.deposit(100)).to eq 100
+    @account.deposit(100)
+    expect(@account.account_balance).to eq(100)
   end
 
   it 'should be able to withdraw money' do
-    account = Account.new
-    account.deposit(100)
-    expect(account.withdraw(50)).to eq 50
+    @account.deposit(100)
+    @account.withdraw(30)
+    expect(@account.account_balance).to eq(70)
   end
+
+
 end
